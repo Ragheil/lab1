@@ -3,42 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Number 1</title>
 </head>
 <body>
-   <h1>Personal Information</h1> 
-   <h2>1</h2>
-<form action="">
-<label class="label" for="fname"> First Name :</label>
-<input class="input" type="text"  id ="fname" placeholder="Name">
-<br>
-<br>
-<label class="label" for="lname">Last Name :</label>
-<input class="input" type="text"  id ="lname" placeholder="Last Name">
-<br>
-<br>   <label class="label" for="address">Address :</label>
-<input class="input" type="text"  id ="name" placeholder="Address">
-<br>
-<br>
-<label class="label" for="age"> Age :</label>
-<input class="input" type="text"  id ="age" placeholder="Age">
-<br>
-<br>
-<label class="label" for="email">Email Adress :</label>
-<input class="input" type="text"  id ="hobby" placeholder="Email Address">
-<br>
-<br>   <label class="label" for="address">Hobby :</label>
-<input class="input" type="text"  id ="hobby" placeholder="hobby">
-<br>
-<br>
-<label class="label" for="Occupation"> Occupation :</label>
-<input class="input" type="text"  id ="fname" placeholder="Occupation">
-<br>
-<br>
+    <div class="container">
+        <center>
+           <br><br> <h1>Personal Information</h1><br>
+            <div class="card" style="width: 50rem;">
+                <div class="card-body">
+                    
+                        <div class="mb-3 row">
+                            <label for="fname" class="col-sm-2 col-form-label">First Name :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="fname" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="lname" class="col-sm-2 col-form-label">Last Name :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="lname" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="address" class="col-sm-2 col-form-label">Address :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="address" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="age" class="col-sm-2 col-form-label">Age :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="age" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="email" class="col-sm-2 col-form-label">Email Address :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="bday" class="col-sm-2 col-form-label">Birthdate :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="date" id="bday" placeholder="bday">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="course" class="col-sm-2 col-form-label">Course :</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" id="course" placeholder="Course">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <div class="col-sm-10 offset-sm-2">
+                                <button onclick="Show()" class="btn btn-primary">Show</button>
+                                <button onclick="clearData()" class="btn btn-danger">Clear</button>
+                            </div>
+                        </div>
+                    
+                    <div id="output"></div>
+                </div>
+            </div>
+        </center>
+    </div>
 
-<button>Show</button> <button>Clear</button>
-</form>
+    <script>
+        function Show() {
+        
+        var firstName = document.getElementById("fname").value;
+          var lastName = document.getElementById("lname").value.toUpperCase();
+          var address = document.getElementById("address").value;
+          var age = document.getElementById("age").value;
+          var email = document.getElementById("email").value;
+          var bday = document.getElementById("bday").value;
+          var course = document.getElementById("course").value;
+        
+        
+          var output = document.getElementById("output");
+          output.innerHTML = "<br/> Hi My Name is " + firstName + "" + " " + lastName + 
+          ". I live at " + address + ", I am " + age + ", my email address is " + email +
+         " the date i born is " + bday + ", and lastly my course is " + course +".";
+        }
+        function clearData() {
+        // Clear the output div
+        document.querySelector('#output').innerHTML = '';
 
-
-</body>
-</html>
+        // Clear the input fields
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+}
+        </script>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        
+        </body>
+        </html>
